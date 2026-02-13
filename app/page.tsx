@@ -274,7 +274,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 pb-16 pt-10 sm:px-6 lg:px-0">
+      <main className="mx-auto max-w-5xl px-4 pb-16 pt-4 sm:px-6 lg:px-0">
         {/* Hero */}
         <section
           id="home"
