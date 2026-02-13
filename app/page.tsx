@@ -680,7 +680,7 @@ export default function Home() {
                     const subject = `Portfolio Contact from ${name}`;
                     const body = `Nama: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0APesan:%0D%0A${message}`;
                     
-                    window.location.href = `mailto:nizrnurafif644@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                    window.location.href = `mailto:nizarnurafif644@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
                   }}
                   className="space-y-4"
                 >
