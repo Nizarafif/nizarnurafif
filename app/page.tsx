@@ -358,27 +358,25 @@ export default function Home() {
           id="about"
           className="border-t border-[#E2E8F0] py-10 md:py-12"
         >
-          <div className="md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] md:gap-12">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-sm font-semibold text-[#0B0F19]">About Me</h2>
-              <p className="mt-2 text-xs text-slate-500">
-                Ringkasan singkat yang relevan untuk rekruter.
-              </p>
-            </div>
-            <div className="space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-              <p className="text-justify">
-                Saya seorang fullstack developer yang berpengalaman membangun aplikasi web
-                dari frontend hingga backend. Terbiasa bekerja dengan stack JavaScript/TypeScript modern
-                (React, Next.js) untuk frontend, dan Node.js dengan Express untuk backend,
-                serta database relational (PostgreSQL, MySQL) maupun NoSQL (MongoDB).
-              </p>
-              <p className="text-justify">
-                Dalam setiap project, saya fokus pada arsitektur yang scalable, clean code,
-                dan best practices seperti RESTful API design, database optimization, dan
-                security. Saya juga memperhatikan struktur folder, separation of concerns,
-                dan dokumentasi yang baik agar codebase mudah di-maintain oleh tim.
-              </p>
-            </div>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-[#0B0F19]">About Me</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Ringkasan singkat yang relevan untuk rekruter.
+            </p>
+          </div>
+          <div className="space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base max-w-4xl mx-auto">
+            <p className="text-justify">
+              Saya seorang fullstack developer yang berpengalaman membangun aplikasi web
+              dari frontend hingga backend. Terbiasa bekerja dengan stack JavaScript/TypeScript modern
+              (React, Next.js) untuk frontend, dan Node.js dengan Express untuk backend,
+              serta database relational (PostgreSQL, MySQL) maupun NoSQL (MongoDB).
+            </p>
+            <p className="text-justify">
+              Dalam setiap project, saya fokus pada arsitektur yang scalable, clean code,
+              dan best practices seperti RESTful API design, database optimization, dan
+              security. Saya juga memperhatikan struktur folder, separation of concerns,
+              dan dokumentasi yang baik agar codebase mudah di-maintain oleh tim.
+            </p>
           </div>
         </section>
 
@@ -387,53 +385,51 @@ export default function Home() {
           id="skills"
           className="border-t border-[#E2E8F0] py-10 md:py-12"
         >
-          <div className="md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] md:gap-12">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-sm font-semibold text-[#0B0F19]">Skills</h2>
-              <p className="mt-2 text-xs text-slate-500">
-                Dikelompokkan agar mudah dibaca dengan cepat.
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-[#0B0F19]">Skills</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Dikelompokkan agar mudah dibaca dengan cepat.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
+                Frontend
               </p>
+              <ul className="mt-2 space-y-2 text-sm text-slate-700">
+                {skills.frontend.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+                      {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-              <div className="grid gap-6 sm:grid-cols-3">
-              <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
-                  Frontend
-                </p>
-                <ul className="mt-2 space-y-2 text-sm text-slate-700">
-                  {skills.frontend.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                       <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                       {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
-                  Backend
-                </p>
-                <ul className="mt-2 space-y-2 text-sm text-slate-700">
-                  {skills.backend.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                       <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                       {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
-                  Tools
-                </p>
-                <ul className="mt-2 space-y-2 text-sm text-slate-700">
-                  {skills.tools.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                       <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                       {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
+                Backend
+              </p>
+              <ul className="mt-2 space-y-2 text-sm text-slate-700">
+                {skills.backend.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+                      {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-xl border border-slate-200 bg-white/50 p-5 shadow-sm transition-all hover:shadow-md hover:border-teal-200 hover:bg-white/80">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-700">
+                Tools
+              </p>
+              <ul className="mt-2 space-y-2 text-sm text-slate-700">
+                {skills.tools.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+                      {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -443,16 +439,13 @@ export default function Home() {
           id="projects"
           className="border-t border-[#E2E8F0] py-10 md:py-12"
         >
-          <div className="md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] md:gap-12">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-sm font-semibold text-[#0B0F19]">
-                Projects
-              </h2>
-              <p className="mt-2 text-xs text-slate-500">
-                Fokus pada masalah, solusi, dan hasil; bukan hanya tampilan.
-              </p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-[#0B0F19]">Projects</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Fokus pada masalah, solusi, dan hasil; bukan hanya tampilan.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
               {projects.map((project) => (
                 <article
                   key={project.title}
@@ -533,7 +526,6 @@ export default function Home() {
                   </div>
                 </article>
               ))}
-            </div>
           </div>
         </section>
 
@@ -542,16 +534,13 @@ export default function Home() {
           id="experience"
           className="border-t border-[#E2E8F0] py-10 md:py-12"
         >
-          <div className="md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] md:gap-12">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-sm font-semibold text-[#0B0F19]">
-                Experience & Education
-              </h2>
-              <p className="mt-2 text-xs text-slate-500">
-                Informasi utama yang biasanya dicari HR dan rekruter teknis.
-              </p>
-            </div>
-            <div className="space-y-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-[#0B0F19]">Experience & Education</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Informasi utama yang biasanya dicari HR dan rekruter teknis.
+            </p>
+          </div>
+          <div className="space-y-8 max-w-4xl mx-auto">
               <div className="space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
                   Experience
@@ -642,7 +631,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Contact */}
@@ -650,14 +638,13 @@ export default function Home() {
           id="contact"
           className="border-t border-[#E2E8F0] py-10 md:py-12"
         >
-          <div className="md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] md:gap-12">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-sm font-semibold text-[#0B0F19]">Contact</h2>
-              <p className="mt-2 text-xs text-slate-500">
-                Kirim pesan langsung atau hubungi melalui kontak di bawah.
-              </p>
-            </div>
-            <div className="space-y-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-[#0B0F19]">Contact</h2>
+            <p className="mt-2 text-sm text-slate-500">
+              Kirim pesan langsung atau hubungi melalui kontak di bawah.
+            </p>
+          </div>
+          <div className="space-y-8 max-w-4xl mx-auto">
               {/* Contact Form */}
               <div className="rounded-xl border border-slate-200 bg-white/50 p-6 shadow-sm">
                 <h3 className="text-sm font-semibold text-[#0B0F19] mb-4 flex items-center gap-2">
@@ -791,7 +778,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
       </main>
 
