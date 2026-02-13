@@ -2,6 +2,13 @@
 
 import Image from "next/image";
 import { useEffect, useState, type MouseEvent } from "react";
+import { 
+  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss,
+  SiNodedotjs, SiExpress, SiPostgresql, SiMysql, SiMongodb, SiPrisma,
+  SiGit, SiGithub, SiPostman, SiDocker, SiFigma, SiVercel, SiNestjs
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -144,9 +151,33 @@ const certifications: Certification[] = [
 ];
 
 const skills = {
-  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Tailwind CSS"],
-  backend: ["Node.js", "Express", "REST API", "PostgreSQL", "MySQL", "MongoDB", "Prisma"],
-  tools: ["Git & GitHub", "VS Code", "Postman", "Docker", "Figma", "Vercel"],
+  frontend: [
+    { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
+    { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+    { name: "JavaScript (ES6+)", icon: SiJavascript, color: "text-yellow-400" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+    { name: "React", icon: SiReact, color: "text-cyan-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-slate-900" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+  ],
+  backend: [
+    { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+    { name: "Express", icon: SiExpress, color: "text-slate-900" },
+    { name: "REST API", icon: TbApi, color: "text-slate-700" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
+    { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "Prisma", icon: SiPrisma, color: "text-slate-900" },
+  ],
+  tools: [
+    { name: "Git", icon: SiGit, color: "text-red-500" },
+    { name: "GitHub", icon: SiGithub, color: "text-slate-900" },
+    { name: "VS Code", icon: VscVscode, color: "text-blue-500" },
+    { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+    { name: "Docker", icon: SiDocker, color: "text-blue-500" },
+    { name: "Figma", icon: SiFigma, color: "text-purple-500" },
+    { name: "Vercel", icon: SiVercel, color: "text-slate-900" },
+  ],
 };
 
 export default function Home() {
@@ -392,9 +423,9 @@ export default function Home() {
               </p>
               <ul className="mt-2 space-y-2 text-sm text-slate-700">
                 {skills.frontend.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                      {item}
+                  <li key={item.name} className="flex items-center gap-3 rounded-lg border border-transparent p-2 transition-colors hover:border-slate-200 hover:bg-slate-50">
+                      <item.icon className={`h-5 w-5 ${item.color}`} />
+                      <span className="font-medium">{item.name}</span>
                   </li>
                 ))}
               </ul>
@@ -405,9 +436,9 @@ export default function Home() {
               </p>
               <ul className="mt-2 space-y-2 text-sm text-slate-700">
                 {skills.backend.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                      {item}
+                  <li key={item.name} className="flex items-center gap-3 rounded-lg border border-transparent p-2 transition-colors hover:border-slate-200 hover:bg-slate-50">
+                      <item.icon className={`h-5 w-5 ${item.color}`} />
+                      <span className="font-medium">{item.name}</span>
                   </li>
                 ))}
               </ul>
@@ -418,9 +449,9 @@ export default function Home() {
               </p>
               <ul className="mt-2 space-y-2 text-sm text-slate-700">
                 {skills.tools.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                      {item}
+                  <li key={item.name} className="flex items-center gap-3 rounded-lg border border-transparent p-2 transition-colors hover:border-slate-200 hover:bg-slate-50">
+                      <item.icon className={`h-5 w-5 ${item.color}`} />
+                      <span className="font-medium">{item.name}</span>
                   </li>
                 ))}
               </ul>
