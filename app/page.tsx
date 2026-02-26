@@ -3,11 +3,10 @@
 import Image from "next/image";
 import { useEffect, useState, type MouseEvent } from "react";
 import { 
-  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss,
-  SiNodedotjs, SiExpress, SiPostgresql, SiMysql, SiMongodb, SiPrisma,
-  SiGit, SiGithub, SiPostman, SiDocker, SiFigma, SiVercel, SiNestjs
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss,
+  SiNodedotjs, SiMysql, SiPhp, SiLaravel,
+  SiGit, SiGithub, SiPostman
 } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 
 const navItems = [
@@ -152,8 +151,6 @@ const certifications: Certification[] = [
 
 const skills = {
   frontend: [
-    { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
-    { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
     { name: "JavaScript (ES6+)", icon: SiJavascript, color: "text-yellow-400" },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
     { name: "React", icon: SiReact, color: "text-cyan-400" },
@@ -161,22 +158,16 @@ const skills = {
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
   ],
   backend: [
+    { name: "PHP", icon: SiPhp, color: "text-indigo-500" },
+    { name: "Laravel", icon: SiLaravel, color: "text-red-500" },
     { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
-    { name: "Express", icon: SiExpress, color: "text-slate-900" },
-    { name: "REST API", icon: TbApi, color: "text-slate-700" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
     { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
-    { name: "Prisma", icon: SiPrisma, color: "text-slate-900" },
   ],
   tools: [
     { name: "Git", icon: SiGit, color: "text-red-500" },
     { name: "GitHub", icon: SiGithub, color: "text-slate-900" },
     { name: "VS Code", icon: VscVscode, color: "text-blue-500" },
     { name: "Postman", icon: SiPostman, color: "text-orange-500" },
-    { name: "Docker", icon: SiDocker, color: "text-blue-500" },
-    { name: "Figma", icon: SiFigma, color: "text-purple-500" },
-    { name: "Vercel", icon: SiVercel, color: "text-slate-900" },
   ],
 };
 
